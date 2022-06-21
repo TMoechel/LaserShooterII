@@ -102,8 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  laserShot: {fileID: 0}
-  projectileSpeed: 18
 --- !u!50 &-5643427790910774004
 Rigidbody2D:
   serializedVersion: 4
@@ -167,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5735858755349780725, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
-  projectileSpeed: 10
-  projectileLifetime: 5
+  projectileSpeed: 15
+  projectileLifetime: 15
   firingRate: 0.2
   isFiring: 0

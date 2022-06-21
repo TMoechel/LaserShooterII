@@ -27,15 +27,12 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue value)
     {
         rawInput = value.Get<Vector2>();
-        Debug.Log(rawInput);
     }
 
     void OnFire(InputValue value)
     {
-        Debug.Log("OnFire Pressed");
         if (shooter != null)
         {
-            Debug.Log("Firing: " + value.isPressed);
             shooter.isFiring = value.isPressed;
         }
     }
@@ -59,7 +56,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 delta = rawInput;
 
-        //var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         var deltaX = delta.x * Time.deltaTime * speed;
         var deltaY = delta.y * Time.deltaTime * speed;
 
