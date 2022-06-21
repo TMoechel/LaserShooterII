@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5851905815289248287}
   - component: {fileID: -4566817613755883535}
   m_Layer: 0
-  m_Name: LaserShot
+  m_Name: LaserShot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

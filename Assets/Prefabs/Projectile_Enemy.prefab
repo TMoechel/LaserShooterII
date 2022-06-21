@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6521004902449816795
+--- !u!1 &873773561842017682
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6521004902449816793}
-  - component: {fileID: 6521004902449816794}
-  - component: {fileID: 6521004902449816792}
-  - component: {fileID: -5643427790910774004}
-  - component: {fileID: -1545430505874133288}
-  - component: {fileID: 6910666081186953420}
-  - component: {fileID: 625178333615107188}
-  m_Layer: 0
-  m_Name: Player
+  - component: {fileID: 1136585942380286177}
+  - component: {fileID: 489386720149899231}
+  m_Layer: 7
+  m_Name: laserRed15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6521004902449816793
+--- !u!4 &1136585942380286177
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.338, y: -4.239, z: 0}
+  m_GameObject: {fileID: 873773561842017682}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 3988501626455040420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6521004902449816794
+--- !u!212 &489386720149899231
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
+  m_GameObject: {fileID: 873773561842017682}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,40 +73,60 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 843e0dab9be8c2f44b7196fb5ec8b0da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfa9de8f13c2987419e77af5d3af2a06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.12, y: 0.75}
+  m_Size: {x: 0.09, y: 0.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6521004902449816792
-MonoBehaviour:
+--- !u!1 &5735858755349780725
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dadfe2c14f176d448a7c85c8a964edb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  laserShot: {fileID: 0}
-  projectileSpeed: 18
---- !u!50 &-5643427790910774004
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3988501626455040420}
+  - component: {fileID: 7429312834032841487}
+  - component: {fileID: 7670370610545941253}
+  - component: {fileID: 7441775045731251797}
+  m_Layer: 7
+  m_Name: Projectile_Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3988501626455040420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735858755349780725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1136585942380286177}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &7429312834032841487
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
+  m_GameObject: {fileID: 5735858755349780725}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -125,49 +140,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &-1545430505874133288
-CircleCollider2D:
+--- !u!70 &7670370610545941253
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
+  m_GameObject: {fileID: 5735858755349780725}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013290286, y: -0.07789886}
-  serializedVersion: 2
-  m_Radius: 0.4885323
---- !u!114 &6910666081186953420
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.17911643, y: 0.66892797}
+  m_Direction: 0
+--- !u!114 &7441775045731251797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
+  m_GameObject: {fileID: 5735858755349780725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b08f4104cd9974243830f20e657a4ff5, type: 3}
+  m_Script: {fileID: 11500000, guid: 79093a962da570d48b765a87aed4ca60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
---- !u!114 &625178333615107188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521004902449816795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7c7945076656434b8c850f7e8fa3e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5735858755349780725, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
-  projectileSpeed: 10
-  projectileLifetime: 5
-  firingRate: 0.2
-  isFiring: 0
+  damage: 10

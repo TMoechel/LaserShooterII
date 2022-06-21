@@ -155,7 +155,6 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 21923905e818de646bfec5d7176fff68, type: 2}
   - {fileID: 11400000, guid: 9bdd388680cd8cf4283b3baa95955e06, type: 2}
-  timeBetweenWaves: 2
   isLooping: 0
 --- !u!4 &41612046
 Transform:
@@ -179,6 +178,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 625178333615107188, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+      propertyPath: projectileSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 625178333615107188, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+      propertyPath: projectileLifetime
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6521004902449816792, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
       propertyPath: laserShot
       value: 
@@ -227,12 +234,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6521004902449816794, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6521004902449816795, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6521004902449816795, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+--- !u!1 &341102642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6521004902449816795, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+  m_PrefabInstance: {fileID: 330492631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &341102643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341102642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 56abe038ff83f7d4387bb527c6734f35, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +367,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &593744383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988501626455040420, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735858755349780725, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
+      propertyPath: m_Name
+      value: Projectile_Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: adcd6d3ac139e0d419395d4efeb12615, type: 3}
 --- !u!1001 &1023975828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,11 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2948210704382496770, guid: f53660f94e6ace844a6d4aa6b99b7d16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0294
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2948210704382496770, guid: f53660f94e6ace844a6d4aa6b99b7d16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0294
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2948210704382496770, guid: f53660f94e6ace844a6d4aa6b99b7d16, type: 3}
       propertyPath: m_LocalPosition.z

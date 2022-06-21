@@ -1,25 +1,43 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
-    [SerializeField] GameObject laserShot;
-    [SerializeField] float projectileSpeed = 18f;
+    Vector2 rawInput;
+    Shooter shooter;
+
     float xMin;
     float xMax;
     float yMin;
     float yMax;
     float xPadding = 0.5f;
     float yPadding = 0.3f;
-   
 
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        shooter = GetComponent<Shooter>();
+    }
     void Start()
     {
         SetUpMoveBoundaries();
+    }
+
+    void OnMove(InputValue value)
+    {
+        rawInput = value.Get<Vector2>();
+        Debug.Log(rawInput);
+    }
+
+    void OnFire(InputValue value)
+    {
+        Debug.Log("OnFire Pressed");
+        if (shooter != null)
+        {
+            Debug.Log("Firing: " + value.isPressed);
+            shooter.isFiring = value.isPressed;
+        }
     }
 
     private void SetUpMoveBoundaries()
@@ -35,22 +53,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Fire();
-    }
-    private void Fire()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            var laserRay = Instantiate(laserShot, transform.position, Quaternion.identity);
-            laserRay.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
-        }
     }
 
     private void Move()
     {
-        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-        
+        Vector3 delta = rawInput;
+
+        //var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        var deltaX = delta.x * Time.deltaTime * speed;
+        var deltaY = delta.y * Time.deltaTime * speed;
+
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
         var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
 
