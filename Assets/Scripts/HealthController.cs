@@ -26,7 +26,7 @@ public class HealthController : MonoBehaviour
     {
         health = health - damage;
 
-        if (health < 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
