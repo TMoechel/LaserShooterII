@@ -3,15 +3,24 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float projectileSpeed = 15f;
     [SerializeField] float projectileLifetime = 15;
-    [SerializeField] float firingRate = 0.2f;
 
+    [Header("Firing")]
+    [SerializeField] float firingRate = 0.1f;
+    [SerializeField] float deltafiringRate = 0.1f;
 
+    [SerializeField] bool useAutoFire;
     public bool isFiring;
+
     private Coroutine firingCoroutine;
 
+    void Start()
+    {
+        isFiring = useAutoFire;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -46,7 +55,8 @@ public class Shooter : MonoBehaviour
             }
 
             Destroy(laserShot, projectileLifetime);
-            yield return new WaitForSeconds(firingRate);
+            float randomFiringRate = Random.Range(firingRate - deltafiringRate, firingRate + deltafiringRate);
+            yield return new WaitForSeconds(randomFiringRate);
         }
     }
 }

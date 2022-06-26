@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1545430505874133288}
   - component: {fileID: 6910666081186953420}
   - component: {fileID: 625178333615107188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,4 +168,6 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifetime: 15
   firingRate: 0.2
+  deltafiringRate: 0.1
+  useAutoFire: 0
   isFiring: 0

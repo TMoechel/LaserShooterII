@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 625178333615107188, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
+      propertyPath: projectileLifetime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6521004902449816792, guid: 9bdca3a590a9b0845b92eea8d753659b, type: 3}
       propertyPath: laserShot
       value: 
