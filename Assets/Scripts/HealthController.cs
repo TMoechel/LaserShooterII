@@ -7,6 +7,9 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField] int health = 50;
 
+    [SerializeField] ParticleSystem hitEffect;
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
@@ -16,6 +19,7 @@ public class HealthController : MonoBehaviour
         {
             // Schaden zufügen
             TakeDamage(damageDealer.GetDamage());
+            PlayHitEffect();
             // DamageDealer Hit() aufrufen
             damageDealer.Hit();
         }
@@ -29,6 +33,15 @@ public class HealthController : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void PlayHitEffect()
+    {
+        if (hitEffect != null)
+        {
+            ParticleSystem instance = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
         }
     }
 }
