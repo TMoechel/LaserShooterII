@@ -55,8 +55,14 @@ public class Shooter : MonoBehaviour
             }
 
             Destroy(laserShot, projectileLifetime);
-            float randomFiringRate = Random.Range(firingRate - deltafiringRate, firingRate + deltafiringRate);
-            yield return new WaitForSeconds(randomFiringRate);
+
+            if (useAutoFire)
+            {
+                firingRate = Random.Range(firingRate - deltafiringRate, firingRate + deltafiringRate);
+            }
+
+
+            yield return new WaitForSeconds(firingRate);
         }
     }
 }
