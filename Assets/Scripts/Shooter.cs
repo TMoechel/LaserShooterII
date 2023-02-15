@@ -14,8 +14,16 @@ public class Shooter : MonoBehaviour
 
     [SerializeField] bool useAutoFire;
     public bool isFiring;
+    
+    public AudioPlayer audioPlayer;
 
     private Coroutine firingCoroutine;
+
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
 
     void Start()
     {
@@ -58,7 +66,8 @@ public class Shooter : MonoBehaviour
 
             if (useAutoFire) 
                 firingRate = Random.Range(firingRate - deltafiringRate, firingRate + deltafiringRate);
-            
+
+            audioPlayer.PlayShootingClip();
             yield return new WaitForSeconds(firingRate);
         }
     }
