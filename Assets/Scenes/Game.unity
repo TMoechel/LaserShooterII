@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab000afc5fab9d340ac1dc95aae3cbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 1
+  shakeDuration: 0.5
   shakeMagnitude: 0.5
 --- !u!1 &1983780041
 GameObject:
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 1983780042}
   - component: {fileID: 1983780043}
   - component: {fileID: 1983780044}
+  - component: {fileID: 1983780045}
   m_Layer: 0
   m_Name: stars_1
   m_TagString: Untagged
@@ -427,6 +428,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589e8b4b2c40d014e867cdee142e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: {x: 0, y: 0}
+--- !u!114 &1983780045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983780041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589e8b4b2c40d014e867cdee142e73e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: {x: 0, y: 0.2}
 --- !u!1 &2038853509
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +453,7 @@ GameObject:
   - component: {fileID: 2038853510}
   - component: {fileID: 2038853511}
   - component: {fileID: 2038853512}
+  - component: {fileID: 2038853513}
   m_Layer: 0
   m_Name: stars_0
   m_TagString: Untagged
@@ -524,6 +540,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589e8b4b2c40d014e867cdee142e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: {x: 0, y: 0}
+--- !u!114 &2038853513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038853509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589e8b4b2c40d014e867cdee142e73e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: {x: 0.1, y: 0.1}
 --- !u!1001 &1726298446607375750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,7 +686,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 64d7bd0db56477242aa80b9026fd6066, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -664,6 +694,6 @@ SpriteRenderer:
   m_Size: {x: 10.8, y: 26.908028}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
